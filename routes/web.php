@@ -13,19 +13,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/welcome', function () {   
-    return view('Welcome');   
-});
-
-
-Route::get('/studio_c', function () {   
-    return view('Studio C.');   
-});
+Route::get('/', function () {   
+    return view('Studio');   
+})->name('studio');
 
 Route::get('/servizi', function () {   
     return view('Servizi');   
-});
+})->name('servizi');
 
 Route::get('/contatti', function () {   
     return view('Contatti');   
-});
+})->name('contatti');
+
+Route::get('/chi_siamo', function () {
+    return view('About us');
+})->name('noi');

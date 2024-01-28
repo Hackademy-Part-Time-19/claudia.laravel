@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Servizi</title>
+    <title>Studio C.</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <style>
@@ -13,11 +14,15 @@
             }
         }
     </style>
+
 </head>
-<body style="background-color: rgba(255, 255, 255, 0.712); font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+
+<body
+    style="background-color: rgba(255, 255, 255, 0.712); font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
     <nav class="navbar navbar-expand-lg bg-body-tertiary" style="background-color: rgb(97, 25, 25);padding: 0px;">
         <div class="container-fluid p-1">
-            <a style="font-weight: 1500; padding-left: 30px;" class="navbar-brand" href="{{ route('studio') }}">Studio C.</a>
+            <a style="font-weight: 1500; padding-left: 30px;" class="navbar-brand" href="{{ route('studio') }}">Studio
+                C.</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -44,7 +49,17 @@
             </div>
         </div>
     </nav>
-    <h1 style="text-align: center"> I NOSTRI SERVIZI</h1>
+    <section id="video">
+        <div style="position: relative; margin-left: 30vh">
+            <video width="80%" height="240" controls autoplay
+                style="object-fit: cover;height: 90vh; padding: 30px; border-radius: 5%;">
+                <source
+                    src="https://www.shutterstock.com/shutterstock/videos/1057352173/preview/stock-footage-sad-frustrated-business-executive-overwhelmed-by-work-he-is-overloaded-with-paperwork-and.webm"
+                    type="video/mp4">Your browser does not support the video tag.
+            </video>
+        </div>
+    </section>
+
     <section id="cards1" style="margin-top:20px; padding-left: 30px ; padding-right: 30px;">
 
         <div class="row" >
@@ -110,6 +125,8 @@
         </div>
 
     </section>
-    
+
+
 </body>
+
 </html>
