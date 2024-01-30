@@ -1,18 +1,7 @@
 <?php
-
 use Illuminate\Support\Facades\Route;
-
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
-
+use App\Http\Controllers\PageController;
+use App\Http\Controllers\ArticleController;
 Route::get('/', function () {   
     return view('Studio');   
 })->name('studio');
@@ -25,6 +14,28 @@ Route::get('/contatti', function () {
     return view('Contatti');   
 })->name('contatti');
 
-Route::get('/chi_siamo', function () {
-    return view('About us');
+Route::get('/noi', function () {
+    return view('Noi');
 })->name('noi');
+
+Route::get('/articoli', function () {
+    return view('Articoli');
+})->name('articoli');
+
+
+
+Route::get('/', [PageController::class,'studio'])->name('studio');
+
+/*Route::get('/articoli',[ArticleController::class,'index'])->name('articles.index');*/
+
+// rotta parametrica
+
+Route::get('/articolo/{id}',[ArticleController::class,'show'])->name('articles.show');
+
+
+
+Route::get('/contatti',[PageController::class,'contatti'])->name('contatti');
+
+
+//rotta con parametro opzionale
+Route::get('/articoli/{category}',[ArticleController::class,'byCategory'])->name('articles.byCategory');
